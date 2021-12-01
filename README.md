@@ -1,6 +1,10 @@
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/steelWinds/test-calendar/Deploy-Action)](https://actions-badge.atrox.dev/steelWinds/test-calendar/goto?ref=main)
+
 # test-calendar
 
 Simple calendar app
+
+Go to app: (Test-Calendar)[https://steelwinds.github.io/test-calendar/]
 
 ## Getting Started
 
