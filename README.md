@@ -4,7 +4,7 @@
 
 Simple calendar app
 
-Go to app: (Test-Calendar)[https://steelwinds.github.io/test-calendar/]
+Go to app: [Test-Calendar](https://steelwinds.github.io/test-calendar/)
 
 ## Getting Started
 
