@@ -8,6 +8,9 @@ import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import ESlintWebpackPlugin from 'eslint-webpack-plugin';
 import MiniCSSExtractPlugin from 'mini-css-extract-plugin';
 
+let progressLog = getWebpackLogger({
+    name: '>>>'
+});
 
 const publicPath = '/test-calendar/';
 const log = getWebpackLogger(

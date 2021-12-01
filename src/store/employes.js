@@ -11,27 +11,27 @@ export default [
             {
                 key: 1,
                 customData: {
-                    title: 'Питер',
+                    title: 'Санкт-Петербург',
                     type: 'work',
-                    class: 'twl-bg-green-600'
+                    class: 'twl-bg-red-600'
                 },
                 dates: new Date(2021, 11, 1)
             },
             {
                 key: 2,
                 customData: {
-                    title: 'Москва',
+                    title: 'Санкт-Петербург',
                     type: 'work',
                     class: 'twl-bg-red-600'
                 },
-                dates: new Date(2021, 11, 6)
+                dates: new Date(2021, 11, 2)
             },
             {
                 key: 3,
                 customData: {
-                    title: 'Недерланды',
-                    type: 'work',
-                    class: 'twl-bg-yellow-600'
+                    title: 'Выходной',
+                    type: 'weekend',
+                    class: 'twl-bg-gray-400'
                 },
                 dates: new Date(2021, 11, 22)
             },
@@ -47,9 +47,18 @@ export default [
             {
                 key: 5,
                 customData: {
-                    title: 'Питер',
+                    title: 'Праздник',
+                    type: 'weekend',
+                    class: 'twl-bg-gray-400'
+                },
+                dates: new Date(2021, 11, 16)
+            },
+            {
+                key: 6,
+                customData: {
+                    title: 'Екатеренбург',
                     type: 'work',
-                    class: 'twl-bg-green-600'
+                    class: 'twl-bg-blue-600'
                 },
                 dates: new Date(2021, 11, 17)
             },
@@ -63,38 +72,56 @@ export default [
             {
                 key: 1,
                 customData: {
-                    title: 'Питер',
+                    title: 'Москва',
                     type: 'work',
-                    class: 'twl-bg-green-600'
+                    class: 'twl-bg-yellow-600'
                 },
-                dates: new Date(2021, 11, 12)
+                dates: new Date(2021, 11, 1)
             },
             {
                 key: 2,
                 customData: {
                     title: 'Москва',
                     type: 'work',
-                    class: 'twl-bg-red-600'
+                    class: 'twl-bg-yellow-600'
                 },
-                dates: new Date(2021, 11, 19)
+                dates: new Date(2021, 11, 2)
             },
             {
                 key: 3,
                 customData: {
-                    title: 'Недерланды',
+                    title: 'Москва',
                     type: 'work',
                     class: 'twl-bg-yellow-600'
                 },
-                dates: new Date(2021, 11, 31)
+                dates: new Date(2021, 11, 3)
             },
             {
                 key: 4,
                 customData: {
-                    title: 'Екатеренбург',
-                    type: 'work',
-                    class: 'twl-bg-blue-600'
+                    title: 'Выходной',
+                    type: 'weekend',
+                    class: 'twl-bg-gray-400'
                 },
-                dates: new Date(2021, 11, 9)
+                dates: new Date(2021, 11, 12)
+            },
+            {
+                key: 5,
+                customData: {
+                    title: 'Выходной',
+                    type: 'weekend',
+                    class: 'twl-bg-gray-400'
+                },
+                dates: new Date(2021, 11, 22)
+            },
+            {
+                key: 6,
+                customData: {
+                    title: 'Выходной',
+                    type: 'weekend',
+                    class: 'twl-bg-gray-400'
+                },
+                dates: new Date(2021, 11, 31)
             },
         ]
     },
@@ -106,38 +133,56 @@ export default [
             {
                 key: 1,
                 customData: {
-                    title: 'Питер',
+                    title: 'Санкт-Петербург',
                     type: 'work',
-                    class: 'twl-bg-green-600'
+                    class: 'twl-bg-red-600'
                 },
-                dates: new Date(2021, 11, 10)
+                dates: new Date(2021, 11, 5)
             },
             {
                 key: 2,
                 customData: {
-                    title: 'Москва',
+                    title: 'Санкт-Петербург',
                     type: 'work',
                     class: 'twl-bg-red-600'
                 },
-                dates: new Date(2021, 11, 20)
+                dates: new Date(2021, 11, 6)
             },
             {
                 key: 3,
                 customData: {
-                    title: 'Недерланды',
+                    title: 'Москва',
                     type: 'work',
                     class: 'twl-bg-yellow-600'
                 },
-                dates: new Date(2021, 11, 28)
+                dates: new Date(2021, 11, 21)
             },
             {
                 key: 4,
                 customData: {
-                    title: 'Екатеренбург',
-                    type: 'work',
-                    class: 'twl-bg-blue-600'
+                    title: 'Выходной',
+                    type: 'weekend',
+                    class: 'twl-bg-gray-400'
                 },
-                dates: new Date(2021, 11, 4)
+                dates: new Date(2021, 11, 1)
+            },
+            {
+                key: 5,
+                customData: {
+                    title: 'Выходной',
+                    type: 'weekend',
+                    class: 'twl-bg-gray-400'
+                },
+                dates: new Date(2021, 11, 29)
+            },
+            {
+                key: 6,
+                customData: {
+                    title: 'Выходной',
+                    type: 'weekend',
+                    class: 'twl-bg-gray-400'
+                },
+                dates: new Date(2021, 11, 23)
             },
         ]
     },

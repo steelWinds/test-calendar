@@ -36,7 +36,7 @@
                 
                 {{ tripDays }}
             </p>
-            <p>командировки</p>
+            <p>дней в командировках</p>
         </section>
     </article>
 </template>

@@ -4,6 +4,13 @@
         
         <section
             class="custom-select__content">
+            
+            <p 
+                v-if="currentComponentId === null"
+                class="twl-text-gray-400">
+                
+                Select employe
+            </p>
 
             <template
                 v-for="employe of data"
@@ -84,7 +91,7 @@ export default {
     data() {
         return {
             menuVisible: false,
-            currentComponentId: 1,
+            currentComponentId: null,
         };
     },
 
@@ -100,10 +107,19 @@ export default {
 
             this.tripCount = Array.from(
                 new Set(
-                    data.map((i) => {
+                    data.filter((i) => {
+                        if (i.customData.type === 'work') {
+                            return true;
+                        }
+
+                        return false;
+                    }).map((i) => {
                         return i.customData.title;
-                    }))
+                    })
+                )
             ).length;
+
+            console.log(this.tripCount);
         },
 
         setComponentId(id, data) {
