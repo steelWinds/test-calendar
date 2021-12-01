@@ -6,8 +6,10 @@ specifiers:
   '@babel/parser': ^7.15.8
   '@babel/preset-env': ^7.15.8
   '@babel/preset-typescript': ^7.15.0
+  '@popperjs/core': ^2.11.0
   '@vue/babel-preset-app': ^4.5.15
   '@vue/compiler-sfc': ^3.2.20
+  '@vue/composition-api': ^1.4.1
   autoprefixer: ^10.3.7
   babel-loader: ^8.2.2
   clean-webpack-plugin: ^4.0.0
@@ -34,6 +36,7 @@ specifiers:
   style-loader: ^3.3.0
   tailwindcss: ^2.2.16
   ts-loader: ^9.2.6
+  v-calendar: ^3.0.0-alpha.6
   vue: ^3.2.20
   vue-eslint-parser: ^8.0.0
   vue-loader: ^16.8.1
@@ -45,10 +48,13 @@ specifiers:
   webpack-log: ^3.0.2
 
 dependencies:
+  '@popperjs/core': 2.11.0
+  '@vue/composition-api': 1.4.1_vue@3.2.20
   core-js: 3.18.2
   html-loader: 3.0.1_webpack@5.58.1
   minima-fetch.js: 1.0.6
   process: 0.11.10
+  v-calendar: 3.0.0-alpha.6_@popperjs+core@2.11.0+vue@3.2.20
   vue: 3.2.20
   vue-router: 4.0.12_vue@3.2.20
 
@@ -1354,6 +1360,10 @@ packages:
       fastq: 1.13.0
     dev: true
 
+  /@popperjs/core/2.11.0:
+    resolution: {integrity: sha512-zrsUxjLOKAzdewIDRWy9nsV1GQsKBCWaGwsZQlCgr6/q+vjyZhFgqedLfFBuI9anTPEUT4APq9Mu0SZBTzIcGQ==}
+    dev: false
+
   /@trysound/sax/0.2.0:
     resolution: {integrity: sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==}
     engines: {node: '>=10.13.0'}
@@ -1397,6 +1407,10 @@ packages:
   /@types/json-schema/7.0.9:
     resolution: {integrity: sha512-qcUXuemtEu+E5wZSJHNxUXeCZhAfXKQ41D+duX+VYPde7xyEVZci+/oXKJL13tnRs9lR2pr4fod59GT6/X1/yQ==}
     dev: true
+
+  /@types/lodash/4.14.177:
+    resolution: {integrity: sha512-0fDwydE2clKe9MNfvXHBHF9WEahRuj+msTuQqOmAApNORFvhMYZKNGGJdCzuhheVjMps/ti0Ak/iJPACMaevvw==}
+    dev: false
 
   /@types/minimatch/3.0.5:
     resolution: {integrity: sha512-Klz949h02Gz2uZCMGwDUSDS1YBlTdDDgbWHi+81l29tQALUtvz4rAYi5uoVhE5Lagoq6DeqAUlbrHvW/mXDgdQ==}
@@ -1594,6 +1608,15 @@ packages:
     dependencies:
       '@vue/compiler-dom': 3.2.20
       '@vue/shared': 3.2.20
+
+  /@vue/composition-api/1.4.1_vue@3.2.20:
+    resolution: {integrity: sha512-ZTat9ru/rwecveRnFzlO2mduOBpGfnBdXn+WtBcFLV9UsL/D+6nX47RWuLiVdNxNDX0qphGZRC+JDjwt+YTnRA==}
+    peerDependencies:
+      vue: '>= 2.5 < 3'
+    dependencies:
+      tslib: 2.3.1
+      vue: 3.2.20
+    dev: false
 
   /@vue/devtools-api/6.0.0-beta.19:
     resolution: {integrity: sha512-ObzQhgkoVeoyKv+e8+tB/jQBL2smtk/NmC9OmFK8UqdDpoOdv/Kf9pyDWL+IFyM7qLD2C75rszJujvGSPSpGlw==}
@@ -2577,6 +2600,19 @@ packages:
 
   /csstype/2.6.18:
     resolution: {integrity: sha512-RSU6Hyeg14am3Ah4VZEmeX8H7kLwEEirXe6aU2IPfKNvhXwTflK5HQRDNI0ypQXoqmm+QPyG2IaPuQE5zMwSIQ==}
+    dev: false
+
+  /date-fns-tz/1.1.6_date-fns@2.27.0:
+    resolution: {integrity: sha512-nyy+URfFI3KUY7udEJozcoftju+KduaqkVfwyTIE0traBiVye09QnyWKLZK7drRr5h9B7sPJITmQnS3U6YOdQg==}
+    peerDependencies:
+      date-fns: '>=2.0.0-alpha.13'
+    dependencies:
+      date-fns: 2.27.0
+    dev: false
+
+  /date-fns/2.27.0:
+    resolution: {integrity: sha512-sj+J0Mo2p2X1e306MHq282WS4/A8Pz/95GIFcsPNMPMZVI3EUrAdSv90al1k+p74WGLCruMXk23bfEDZa71X9Q==}
+    engines: {node: '>=0.11'}
     dev: false
 
   /debug/2.6.9:
@@ -3980,7 +4016,6 @@ packages:
 
   /lodash/4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
-    dev: true
 
   /loglevelnext/3.0.1:
     resolution: {integrity: sha512-JpjaJhIN1reaSb26SIxDGtE0uc67gPl19OMVHrr+Ggt6b/Vy60jmCtKgQBrygAH0bhRA2nkxgDvM+8QvR8r0YA==}
@@ -5810,6 +5845,21 @@ packages:
     deprecated: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
     hasBin: true
     dev: true
+
+  /v-calendar/3.0.0-alpha.6_@popperjs+core@2.11.0+vue@3.2.20:
+    resolution: {integrity: sha512-5z9EEXE0Cmu0UWV4Kju1CNwbYqRZBgR8WAK+0NeXRppfmm28TOcVv6QmC9WG6aM0PKcCt3lo/SHboN08ViQ6/A==}
+    peerDependencies:
+      '@popperjs/core': ^2.4.0
+      vue: ^3.0.0
+    dependencies:
+      '@popperjs/core': 2.11.0
+      '@types/lodash': 4.14.177
+      core-js: 3.18.2
+      date-fns: 2.27.0
+      date-fns-tz: 1.1.6_date-fns@2.27.0
+      lodash: 4.17.21
+      vue: 3.2.20
+    dev: false
 
   /v8-compile-cache/2.3.0:
     resolution: {integrity: sha512-l8lCEmLcLYZh4nbunNZvQCJc5pv7+RCwa8q/LdUx8u7lsWvPDKmpodJAJNwkAhJC//dFY48KuIEmjtd4RViDrA==}

@@ -9,7 +9,7 @@ import ESlintWebpackPlugin from 'eslint-webpack-plugin';
 import MiniCSSExtractPlugin from 'mini-css-extract-plugin';
 
 
-const publicPath = '/dist/';
+const publicPath = '/test-calendar/';
 const log = getWebpackLogger(
     {
         name: 'webpack-kit'
@@ -76,8 +76,12 @@ export default (env, args) => {
                     ]
                 },
                 {
-                    test: /.(png|svg|jpg|jpeg|gif)/,
+                    test: /.(png|svg|jpg|jpeg|gif)$/i,
                     type: 'asset/resource',
+                },
+                {
+                    test: /.(woff|woff2|eot|ttf|otf)$/,
+                    type: 'asset/resource'
                 }
             ]
         },

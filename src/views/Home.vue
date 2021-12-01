@@ -1,41 +1,58 @@
 <template>
     <article class="home">
-        <section
+        <h1 
             class="
-                twl-w-full
-                twl-max-w-xl
-                twl-justify-center
-                twl-items-center
-                twl-grid
-                twl-grid-cols-2
-                twl-grid-rows-1">
+                home__title
+                twl-mt-20
+                twl-mb-9">
             
-            <img
-                class="home__image"
-                src="../assets/img/vue-logo.png"
-                alt="Logo of Vue">
+            планирование
+        </h1>
 
-            <img 
-                class="home__image"
-                src="../assets/img/webpack-logo.svg" 
-                alt="Logo of Webpack">
+        <section class="home__content">
+            <Calendar 
+                :data="currentData"
+            />
+
+            <aside class="home__employe-info">
+                <SelectEmploye
+                    v-model:optionModel="currentData" 
+                />
+            </aside>
         </section>
-        
-        <a 
-            class="
-                twl-text-vue-color
-                twl-text-xl"
-            href="https://github.com/steelWinds">
-           
-            My Github
-        </a>
     </article>
 </template>
 
 <script>
+import { computed } from 'vue';
+
+import Calendar from '../components/Calendar.vue';
+import SelectEmploye from '../components/Employe/SelectEmploye.vue';
+import CustomSelect from '../components/CustomSelect.vue';
+
 export default {
+    components: {
+        Calendar,
+        SelectEmploye
+    },
+
+    provide() {
+        return {
+            currentData: computed({
+                get: () => {
+                    return this.currentData;
+                },
+                set: (value) => {
+                    this.currentData = value;
+                }
+            })
+        };
+    },
+
     data() {
-        return {};
+        return {
+            currentData: [],
+        };
     }
 };
 </script>
@@ -45,15 +62,37 @@ export default {
     @apply 
         twl-flex
         twl-flex-col
-        twl-items-center;
+        twl-items-start
+        twl-p-3
+        twl-w-full
+        twl-max-w-screen-xl !important;
 
-    &__image {
-        display: block;
+    &__title {
+        @apply 
+            twl-text-6xl;
 
-        width: 300px;
-        height: 100%;
+        font-family: Roboto Condensed;
+        font-weight: bold;
+        text-transform: capitalize;
+    }
 
-        object-fit: cover
+    &__content {
+        @apply 
+            twl-w-full
+            twl-grid
+            twl-gap-8;
+
+        grid-template: repeat(1, 1fr) / 1fr 400px;
+
+        @media (max-width: 1024px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__employe-info {
+        @apply 
+            twl-order-1
+            lg:twl-order-2;
     }
 }
 </style>

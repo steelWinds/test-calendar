@@ -1,9 +1,28 @@
+@import './include-fonts.css';
+
 @tailwind base;
 @tailwind utilities;
 @tailwind components;
 
-/* Additional normalize styles */
+/* Variables */
 
-body {
-  font-family: sans-serif !important;
+:root {
+    --main-font: Roboto Condensed;
+    --color-light-gray:  #E5E5E5;
+    --color-gray: #E9E9E9;
+    --color-blue: #0078D2;
+}
+
+/* Vue animations */
+
+.hide-enter-active,
+.hide-leave-active {
+  transition: all .25s ease-in-out;
+  perspective: 1000px;
+}
+
+.hide-enter-from,
+.hide-leave-to {
+  opacity: 0;
+  transform: translateY(10px);
 }

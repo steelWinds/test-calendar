@@ -1,9 +1,9 @@
 module.exports = {
     prefix: 'twl-',
     theme: {
-        colors: {
-            'vue-color': '#4dba87',
-            'webpack-color': '#1c78c0'
+        screens: {
+            lg: '1024px',
+            xl: '1280px'
         }
     },
     purge: [
