@@ -3,7 +3,7 @@
         <h1 
             class="
                 home__title
-                twl-mt-20
+                twl-mt-14
                 twl-mb-9">
             
             планирование
@@ -28,7 +28,6 @@ import { computed } from 'vue';
 
 import Calendar from '../components/Calendar.vue';
 import SelectEmploye from '../components/Employe/SelectEmploye.vue';
-import CustomSelect from '../components/CustomSelect.vue';
 
 export default {
     components: {
@@ -82,17 +81,17 @@ export default {
             twl-grid
             twl-gap-8;
 
-        grid-template: repeat(1, 1fr) / 1fr 400px;
+        grid-template: repeat(1, 1fr) / 1fr 400px; 
 
-        @media (max-width: 1024px) {
+        @media (max-width: 1520px) {
             grid-template-columns: 1fr;
         }
     }
 
     &__employe-info {
-        @apply 
-            twl-order-1
-            lg:twl-order-2;
+        @apply
+            twl-order-first
+            2xl:twl-order-2;
     }
 }
 </style>

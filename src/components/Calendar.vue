@@ -177,11 +177,12 @@ export default {
     }
 
     & .vc-weeks {
-        grid-template-columns: repeat(7, minmax(120px, 1fr));
+        grid-template-columns: repeat(7, minmax(110px, 1fr));
     }
 
     & .vc-day {
         @apply 
+            twl-w-full
             twl-flex
             twl-flex-col
             twl-items-end
