@@ -4,6 +4,12 @@
 @tailwind utilities;
 @tailwind components;
 
+/* My normalize */
+
+body {
+  background-color: var(--color-light-gray);
+}
+
 /* Variables */
 
 :root {
