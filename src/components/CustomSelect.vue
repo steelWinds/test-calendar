@@ -3,7 +3,8 @@
         class="custom-select">
         
         <section
-            class="custom-select__content">
+            class="custom-select__content"
+            @click.stop="switchMenuVisible()">
             
             <p 
                 v-if="currentComponentId === null"
@@ -58,7 +59,7 @@
 
         <button
             class="custom-select__btn"
-            @click="switchMenuVisible()">
+            @click.stop="switchMenuVisible()">
             
             <img 
                 src="../assets/img/vector-rect.svg" 
