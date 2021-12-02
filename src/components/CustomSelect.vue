@@ -1,10 +1,10 @@
 <template>
     <article 
-        class="custom-select">
+        class="custom-select"
+        @click.stop="switchMenuVisible()">
         
         <section
-            class="custom-select__content"
-            @click.stop="switchMenuVisible()">
+            class="custom-select__content">
             
             <p 
                 v-if="currentComponentId === null"
@@ -42,7 +42,7 @@
                     v-for="employe of data"
                     :key="employe.id"
                     class="custom-select__menu-item"
-                    @click="setComponentId(employe.id, employe.data)">
+                    @click.stop="setComponentId(employe.id, employe.data)">
 
                     <template #image>
                         <img 
@@ -58,8 +58,7 @@
         </transition>
 
         <button
-            class="custom-select__btn"
-            @click.stop="switchMenuVisible()">
+            class="custom-select__btn">
             
             <img 
                 src="../assets/img/vector-rect.svg" 
@@ -148,6 +147,8 @@ export default {
     border: .15rem solid var(--color-gray);
     border-radius: 4px;
     padding-right: 60px;
+
+    cursor: pointer;
 
     &__menu {
         @apply 
