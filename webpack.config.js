@@ -12,7 +12,7 @@ let progressLog = getWebpackLogger({
     name: '>>>'
 });
 
-const publicPath = '/test-calendar/';
+const publicPath = '/dist/';
 const log = getWebpackLogger(
     {
         name: 'webpack-kit'
@@ -84,7 +84,10 @@ export default (env, args) => {
                 },
                 {
                     test: /.(woff|woff2|eot|ttf|otf)$/,
-                    type: 'asset/resource'
+                    type: 'asset/resource',
+                    generator: {
+                        filename: 'fonts/[hash][ext]'
+                    }
                 }
             ]
         },
