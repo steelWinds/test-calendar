@@ -177,7 +177,7 @@ export default {
     }
 
     & .vc-weeks {
-        grid-template-columns: repeat(7, minmax(110px, 1fr));
+        grid-template-columns: repeat(7, minmax(120px, 1fr));
     }
 
     & .vc-day {
@@ -205,13 +205,14 @@ export default {
                 twl-w-full
                 twl-text-xs;
 
-            max-width: max-content;
+            max-width: 110px;
             padding: 1px 12px;
             border-radius: 4px;
             
             font-family: var(--main-font);
             font-weight: normal;
             color: white;
+            text-align: center;
         }
     }
 
