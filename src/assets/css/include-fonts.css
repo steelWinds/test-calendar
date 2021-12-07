@@ -7,7 +7,7 @@
         url('../fonts/RobotoCondensed-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
-    font-display: swap;
+    font-display: fallback;
 }
 
 @font-face {
@@ -19,6 +19,6 @@
         url('../fonts/RobotoCondensed-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
+    font-display: fallback;
 }
 

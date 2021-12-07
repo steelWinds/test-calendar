@@ -12,7 +12,7 @@ let progressLog = getWebpackLogger({
     name: '>>>'
 });
 
-const publicPath = '/dist/';
+const publicPath = '/test-calendar/';
 const log = getWebpackLogger(
     {
         name: 'webpack-kit'
